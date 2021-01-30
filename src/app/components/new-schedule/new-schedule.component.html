@@ -1,0 +1,30 @@
+<div class="schedule">
+  <div class="new">
+    <div class="title">Nova ordem de serviço</div>
+    <div class="subtitle">Os campos com * são obrigatórios</div>
+    <form (ngSubmit)="addSchedule($event)" class="example-form" ngNativeValidate>
+        <div class="form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Serviço</mat-label>
+            <input #service name="service" matInput placeholder="Lavagem Ecologica COVID-19" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width example-full-width--custom">
+            <mat-label>Data de Agendamento</mat-label>
+            <input #scheduled mask="00/00/0000" name="scheduled" matInput placeholder="28/08/2020" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width example-full-width--custom">
+            <mat-label>Placa</mat-label>
+            <input #board mask="AAA-AAAA" name="board" matInput placeholder="Placa*" required>
+          </mat-form-field>
+        </div>
+        <div class="buttons">
+          <div class="button-container">
+            <div (click)="clearForm()" class="button button--cancel">Cancelar</div>
+          </div>
+          <div class="button-container">
+            <button type="submit" class="button button--add">Adicionar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

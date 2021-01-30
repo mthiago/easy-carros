@@ -1,0 +1,114 @@
+.schedule {
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .new {
+
+        .title {
+            color: #0C5990;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #C1C1C1;
+            margin-bottom: 29px;
+            text-align: center;
+        }
+
+        .example-form {
+            min-width: 150px;
+            max-width: 500px;
+            width: 100%;
+        }
+          
+        .example-full-width {
+            width: 100%;
+        }
+
+        .mat-input-element {
+            color: #838383;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .button-container {
+
+                .button {
+                    width: 168px;
+                    height: 48px;
+                    border-radius: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #0C5990;
+                    cursor: pointer;
+        
+                    &--cancel {
+                        color: #0C5990;
+                        margin-bottom: 10px;
+                    }
+        
+                    &--add {
+                        background-color: #0C5990;
+                        color: white;
+                    }
+                }
+    
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 48em) {
+    .schedule {
+        .new {
+            .example-form {
+                display: grid;
+                min-width: unset;
+                max-width: unset;
+                
+                .form {
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+
+            .example-full-width {
+                width: 50%;
+
+                &--custom {
+                    width: 20%;
+                }
+            }
+
+            .buttons {
+                justify-content: flex-end;
+                grid-template-columns: 50% 50%;
+                margin-top: 30px;
+
+                .button-container {
+                    cursor: pointer;
+    
+                    .button {
+            
+                        &--add {
+                            margin-left: 20px;
+                        }
+                    }
+        
+                }
+            }
+
+        }
+    
+    }
+
+}

@@ -1,0 +1,40 @@
+<app-new-schedule (listChanged)="onListChanged($event)"></app-new-schedule>
+<div class="list-schedule">
+    <div class="top">
+        <div class="title">Serviço</div>
+        <div class="title">Data de Execução</div>
+        <div class="title">Data de Agendamento</div>
+        <div class="title">Placa</div>
+    </div>
+    <div class="items">
+        <div class="item" *ngFor="let s of schedules">
+            <div style="display: none;">
+                {{ s.id }}
+            </div>
+            <div class="title center">
+                {{ s.service }}
+            </div>
+            <div class="date center">
+                {{ s.executed }}
+            </div>
+            <div class="date center">
+                {{ s.scheduled }}
+            </div>
+            <div class="board center">
+                {{ s.board }}
+            </div>
+            <div class="buttons">
+                <div class="trash center">
+                    <span (click)="remove(s.id)" class="material-icons">
+                        cancel
+                    </span>
+                </div>
+                <div class="finish center">
+                    <span (click)="finish(s.id)" *ngIf="!s.executed" class="material-icons">
+                        check_circle_outline
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
